@@ -1,12 +1,17 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Character from './components/Character';
 
+const Container = styled.div`
+  max-width: 1280px;
+  margin: auto;
+`
 function App() {
   return (
-    <div className="App">
+    <Container className="App">
      <Character />
-    </div>
+    </Container>
   );
 }
 

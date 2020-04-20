@@ -20,7 +20,7 @@ function Character() {
 
   return (
     <CharacterStyled >
-      {characters.results && <Card characters={characters.results} />}
+      {characters.results ? <Card characters={characters.results} /> : 'cargando...'}
     </CharacterStyled>
   )
 }
