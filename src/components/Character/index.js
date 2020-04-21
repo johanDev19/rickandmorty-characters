@@ -1,22 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useContext } from "react";
 
-import Card from './../Card';
-import { CharacterStyled } from './CharacterStyled';
+import Card from "./../Card";
+import { CharacterStyled } from "./CharacterStyled";
 
-import { getCharacters } from './../../services/rickandmortyService';
+import { getCharacters } from "./../../services/rickandmortyService";
+import { Context } from "./../../Store";
 
 function Character() {
-  const [characters, setCharacters] = useState({});
-  
+  const [state, dispatch] = useContext(Context);
+
   useEffect(() => {
-    getCharacters().then(res => setCharacters(res));
-  }, []);
+    getCharacters().then((res) =>
+      dispatch({
+        type: "SET_CHARACTERS",
+        payload: res,
+      })
+    );
+  }, [dispatch]);
 
   return (
-    <CharacterStyled >
-      {characters.results ? <Card characters={characters.results} /> : 'cargando...'}
+    <CharacterStyled>
+      {state.characters ? (
+        <Card characters={state.characters.results} />
+      ) : (
+        "cargando..."
+      )}
     </CharacterStyled>
-  )
+  );
 }
 
 export default Character;

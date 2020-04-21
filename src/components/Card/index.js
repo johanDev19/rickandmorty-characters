@@ -1,9 +1,9 @@
 import React from "react";
 
-import { CardStyled } from './CardStyled';
+import { CardStyled } from "./CardStyled";
 
-function Card({characters}) {
-  return characters.map(character => (
+function Card({ characters = [] }) {
+  return characters.map((character) => (
     <CardStyled>
       <figure>
         <img src={character.image} alt="character" />
@@ -15,6 +15,6 @@ function Card({characters}) {
       </ul>
     </CardStyled>
   ));
-} 
+}
 
 export default Card;
