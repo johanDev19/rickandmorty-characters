@@ -1,6 +1,8 @@
 import React from "react";
 
-import { CardStyle } from "./CardStyle";
+import Label from './../Label';
+
+import { CardStyle, CardContent } from "./CardStyle";
 
 function Card({ characters = [] }) {
   return characters.map((character) => (
@@ -8,11 +10,11 @@ function Card({ characters = [] }) {
       <figure>
         <img src={character.image} alt="character" />
       </figure>
-      <ul>
-        <li>Nombre: {character.name}</li>
-        <li>Estado: {character.status}</li>
-        <li>Especie: {character.species}</li>
-      </ul>
+      <CardContent>
+        <Label title="name" content={character.name} />
+        <Label title="status" content={character.status} />
+        <Label title="species" content={character.species} />
+      </CardContent>
     </CardStyle>
   ));
 }

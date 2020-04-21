@@ -28,7 +28,7 @@ function SearchBar() {
         Buscar
       </button>
       {state.searchValue && (
-        <button class="danger" type="button" onClick={resetSearchValue} >
+        <button className="danger" type="button" onClick={resetSearchValue} >
           Limpiar
         </button>
       )}

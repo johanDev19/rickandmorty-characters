@@ -28,3 +28,7 @@ export const CardStyle = styled.article`
     }
   }
 `
+
+export const CardContent = styled.div`
+  align-self: flex-start;
+`;
