@@ -10,6 +10,11 @@ const Reducer = (state, action) => {
         ...state,
         searchValue: action.payload
       }
+    case "REMOVE_SEARCH_VALUE":
+      return {
+        ...state,
+        searchValue: ''
+      }
     default:
       return state;
   }

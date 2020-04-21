@@ -13,15 +13,25 @@ function SearchBar() {
     });
   };
 
+  const resetSearchValue = () => {
+    dispatch({type:'REMOVE_SEARCH_VALUE'});
+    setSearchValue('')
+  }
+
   return (
     <SearchBarStyle>
       <input
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
       />
-      <button onClick={handleSubmit} type="button">
+      <button className="primary" type="button" onClick={handleSubmit}>
         Buscar
       </button>
+      {state.searchValue && (
+        <button class="danger" type="button" onClick={resetSearchValue} >
+          Limpiar
+        </button>
+      )}
     </SearchBarStyle>
   );
 }

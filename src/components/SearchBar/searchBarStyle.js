@@ -20,8 +20,26 @@ export const SearchBarStyle = styled.div`
     width: 10%;
     min-width: 113px;
     border: none;
-    background-color: #f5f5dc;
-    cursor: pointer;
     font-size: 20px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  button.primary {
+    background-color: #f5f5dc;
+    color: #000;
+
+    &:hover {
+      background-color: #dcdcc2;
+    }
+  }
+
+  button.danger {
+    background-color: #dc3547;
+    color: #fff;
+
+    &:hover {
+      background-color: #c53141;
+    }
   }
 `;
