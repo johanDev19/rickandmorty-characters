@@ -4,7 +4,7 @@ import { CardStyled } from "./CardStyled";
 
 function Card({ characters = [] }) {
   return characters.map((character) => (
-    <CardStyled>
+    <CardStyled key={character.id}>
       <figure>
         <img src={character.image} alt="character" />
       </figure>
