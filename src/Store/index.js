@@ -3,6 +3,7 @@ import Reducer from "./../reducer";
 
 const initialStore = {
   characters: null,
+  searchValue: ''
 };
 
 const Context = createContext(initialStore);

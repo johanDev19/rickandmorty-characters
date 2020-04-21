@@ -1,10 +1,10 @@
 import React from "react";
 
-import { CardStyled } from "./CardStyled";
+import { CardStyle } from "./CardStyle";
 
 function Card({ characters = [] }) {
   return characters.map((character) => (
-    <CardStyled key={character.id}>
+    <CardStyle key={character.id}>
       <figure>
         <img src={character.image} alt="character" />
       </figure>
@@ -13,7 +13,7 @@ function Card({ characters = [] }) {
         <li>Estado: {character.status}</li>
         <li>Especie: {character.species}</li>
       </ul>
-    </CardStyled>
+    </CardStyle>
   ));
 }
 

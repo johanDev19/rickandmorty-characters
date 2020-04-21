@@ -2,9 +2,14 @@ const Reducer = (state, action) => {
   switch (action.type) {
     case "SET_CHARACTERS":
       return {
-        state,
+        ...state,
         characters: action.payload,
       };
+    case "SET_SEARCH_VALUE":
+      return {
+        ...state,
+        searchValue: action.payload
+      }
     default:
       return state;
   }

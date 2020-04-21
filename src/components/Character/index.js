@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from "react";
 
 import Card from "./../Card";
-import { CharacterStyled } from "./CharacterStyled";
+import { CharacterStyle } from "./CharacterStyle";
 
 import { getCharacters } from "./../../services/rickandmortyService";
 import { Context } from "./../../Store";
@@ -10,22 +10,22 @@ function Character() {
   const [state, dispatch] = useContext(Context);
 
   useEffect(() => {
-    getCharacters().then((res) =>
+    getCharacters(state.searchValue).then((res) =>
       dispatch({
         type: "SET_CHARACTERS",
         payload: res,
       })
     );
-  }, [dispatch]);
+  }, [dispatch, state.searchValue]);
 
   return (
-    <CharacterStyled>
+    <CharacterStyle>
       {state.characters ? (
         <Card characters={state.characters.results} />
       ) : (
         "cargando..."
       )}
-    </CharacterStyled>
+    </CharacterStyle>
   );
 }
 
