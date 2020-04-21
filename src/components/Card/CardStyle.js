@@ -10,7 +10,7 @@ export const CardStyle = styled.article`
   min-height: 400px;
   background-color: #fff;
   border-radius: 10px;
-  margin: 10px auto;
+  margin: 10px;
   padding: 20px;
   box-shadow: 0px 10px 1px #ddd, 0 10px 20px #ccc;
   box-sizing: border-box;
