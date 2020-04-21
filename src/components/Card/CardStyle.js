@@ -27,7 +27,7 @@ export const CardStyle = styled.article`
       width: 100%;
     }
   }
-`
+`;
 
 export const CardContent = styled.div`
   align-self: flex-start;

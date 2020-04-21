@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const LabelStyle = styled.div`
   margin-bottom: 10px;
@@ -16,6 +16,5 @@ export const LabelStyle = styled.div`
     display: block;
     font-size: 20px;
     color: #6c757d;
-
   }
-`
+`;

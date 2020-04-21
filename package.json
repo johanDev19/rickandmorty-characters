@@ -19,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "node startServer.js"
+    "start": "yarn build && node startServer.js"
   },
   "eslintConfig": {
     "extends": "react-app"

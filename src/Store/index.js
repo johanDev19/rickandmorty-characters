@@ -1,9 +1,9 @@
-import React, { createContext, useReducer } from "react";
-import Reducer from "./../reducer";
+import React, { createContext, useReducer } from 'react';
+import Reducer from './../reducer';
 
 const initialStore = {
   characters: null,
-  searchValue: ''
+  searchValue: '',
 };
 
 const Context = createContext(initialStore);

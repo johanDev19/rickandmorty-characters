@@ -1,6 +1,6 @@
-import React, { useContext, useState } from "react";
-import { Context } from "./../../Store";
-import { SearchBarStyle } from "./searchBarStyle";
+import React, { useContext, useState } from 'react';
+import { Context } from './../../Store';
+import { SearchBarStyle } from './searchBarStyle';
 
 function SearchBar() {
   const [state, dispatch] = useContext(Context);
@@ -8,15 +8,15 @@ function SearchBar() {
 
   const handleSubmit = () => {
     dispatch({
-      type: "SET_SEARCH_VALUE",
+      type: 'SET_SEARCH_VALUE',
       payload: searchValue,
     });
   };
 
   const resetSearchValue = () => {
-    dispatch({type:'REMOVE_SEARCH_VALUE'});
-    setSearchValue('')
-  }
+    dispatch({ type: 'REMOVE_SEARCH_VALUE' });
+    setSearchValue('');
+  };
 
   return (
     <SearchBarStyle>
@@ -28,7 +28,7 @@ function SearchBar() {
         Buscar
       </button>
       {state.searchValue && (
-        <button className="danger" type="button" onClick={resetSearchValue} >
+        <button className="danger" type="button" onClick={resetSearchValue}>
           Limpiar
         </button>
       )}

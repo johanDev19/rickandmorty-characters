@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 import Label from './../Label';
 
-import { CardStyle, CardContent } from "./CardStyle";
+import { CardStyle, CardContent } from './CardStyle';
 
 function Card({ characters = [] }) {
   return characters.map((character) => (
