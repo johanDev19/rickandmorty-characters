@@ -2,7 +2,7 @@ import React, { createContext, useReducer } from "react";
 import Reducer from "./../reducer";
 
 const initialStore = {
-  characters: [],
+  characters: null,
 };
 
 const Context = createContext(initialStore);
