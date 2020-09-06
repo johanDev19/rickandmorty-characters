@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Characters } from "./components/Characters";
-import SearchBar from "./components/SearchBar";
-
+import { Home } from "./pages/home";
 import { Store } from "./Store";
 
 const Container = styled.div`
@@ -14,9 +12,8 @@ const Container = styled.div`
 function App() {
   return (
     <Store>
-      <Container className="App">
-        <SearchBar />
-        <Characters />
+      <Container>
+        <Home />
       </Container>
     </Store>
   );
