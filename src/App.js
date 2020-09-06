@@ -1,10 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import Character from './components/Character';
-import SearchBar from './components/SearchBar';
-
-import { Store } from './Store';
+import { Home } from "./pages/home";
+import { Store } from "./Store";
 
 const Container = styled.div`
   max-width: 1280px;
@@ -14,9 +12,8 @@ const Container = styled.div`
 function App() {
   return (
     <Store>
-      <Container className="App">
-        <SearchBar />
-        <Character />
+      <Container>
+        <Home />
       </Container>
     </Store>
   );

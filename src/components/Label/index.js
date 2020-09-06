@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import { LabelStyle } from './labelStyle';
+import { LabelStyle, Title, Content } from "./styles";
 
 function Label({ title, content }) {
   return (
     <LabelStyle>
-      <span className="title">{title}:</span>
-      <span className="content">{content}</span>
+      <Title className="title">{title}:</Title>
+      <Content className="content">{content}</Content>
     </LabelStyle>
   );
 }

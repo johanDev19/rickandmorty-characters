@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const CardStyle = styled.article`
   display: flex;
@@ -6,7 +6,6 @@ export const CardStyle = styled.article`
   align-items: center;
   justify-content: space-between;
   width: auto;
-  min-width: 400px;
   min-height: 400px;
   background-color: #fff;
   border-radius: 10px;
