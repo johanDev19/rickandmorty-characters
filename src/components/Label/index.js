@@ -1,6 +1,6 @@
 import React from "react";
 
-import { LabelStyle, Title, Content } from "./labelStyle";
+import { LabelStyle, Title, Content } from "./styles";
 
 function Label({ title, content }) {
   return (

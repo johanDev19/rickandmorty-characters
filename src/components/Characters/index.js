@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from "react";
 
 import { Cards } from "./../Cards";
-import { CharacterStyle } from "./CharacterStyle";
+import { CharacterStyle } from "./styles";
 
 import { getCharacters } from "./../../services/rickandmortyService";
 import { Context } from "./../../Store";

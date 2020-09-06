@@ -2,7 +2,7 @@ import React from "react";
 
 import Label from "./../Label";
 import { Avatar } from "../Avatar";
-import { CardStyle, CardContent } from "./CardStyle";
+import { CardStyle, CardContent } from "./styles";
 
 export function Cards({ characters = [] }) {
   return characters.map(character => (

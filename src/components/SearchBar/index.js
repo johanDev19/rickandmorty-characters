@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Context } from './../../Store';
-import { SearchBarStyle } from './searchBarStyle';
+import { SearchBarStyle } from './styles';
 
 function SearchBar() {
   const [state, dispatch] = useContext(Context);
