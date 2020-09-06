@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import Label from './../Label';
+import Label from "./../Label";
 
-import { CardStyle, CardContent } from './CardStyle';
+import { CardStyle, CardContent } from "./CardStyle";
 
-function Card({ characters = [] }) {
-  return characters.map((character) => (
+export function Cards({ characters = [] }) {
+  return characters.map(character => (
     <CardStyle key={character.id}>
       <figure>
         <img src={character.image} alt="character" />
@@ -18,5 +18,3 @@ function Card({ characters = [] }) {
     </CardStyle>
   ));
 }
-
-export default Card;

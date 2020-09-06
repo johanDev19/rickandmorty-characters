@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from "react";
 
-import Card from "./../Card";
+import { Cards } from "./../Cards";
 import { CharacterStyle } from "./CharacterStyle";
 
 import { getCharacters } from "./../../services/rickandmortyService";
@@ -21,7 +21,7 @@ export function Characters() {
   return (
     <CharacterStyle>
       {state.characters ? (
-        <Card characters={state.characters.results} />
+        <Cards characters={state.characters.results} />
       ) : (
         "cargando..."
       )}
