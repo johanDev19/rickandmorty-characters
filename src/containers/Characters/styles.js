@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CharacterStyle = styled.div`
+export const CharactersContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 

@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-import { Characters } from "./../components/Characters";
+import { Characters } from "./../containers/Characters";
 import SearchBar from "./../components/SearchBar";
 
 export function Home() {
