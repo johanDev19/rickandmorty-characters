@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useHistory, useParams } from "react-router";
 
 import { SearchBarStyle } from "./searchBarStyles";
@@ -6,10 +6,8 @@ import { Button } from "../ui/button";
 
 function SearchBar() {
   const history = useHistory();
-  const params = useParams();
-  const [searchValue, setSearchValue] = React.useState(
-    params?.characterName || ""
-  );
+  const { characterName } = useParams();
+  const [searchValue, setSearchValue] = React.useState(characterName || "");
   const resetSearchValue = () => setSearchValue("");
 
   const handleOnChange = (e) => {
