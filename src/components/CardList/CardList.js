@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Label from "../Label";
-import { Avatar } from "../Avatar";
-import { CardStyle, CardContent } from "./CardListStyles";
+import Label from "../label";
+import Avatar from "../avatar";
+import { CardStyle, CardContent } from "./cardListStyles";
 
 function CardList({ data }) {
   return data.map((character) => (

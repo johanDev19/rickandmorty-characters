@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-import CardList from "../../components/CardList";
-import { CharactersContainer } from "./CharacterListStyles";
+import CardList from "../../components/cardList";
+import { CharactersContainer } from "./characterListStyles";
 
 import { getCharacterByName } from "../../services/rickandmortyService";
 import ApplicationContext from "../../context/ApplicationContext";

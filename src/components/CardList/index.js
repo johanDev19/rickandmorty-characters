@@ -1,3 +1,3 @@
-import CardList from "./CardList";
+import CardList from "./cardList";
 
 export default CardList;

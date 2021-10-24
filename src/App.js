@@ -1,6 +1,6 @@
 import React from "react";
-import AppRouter from "./AppRouter";
-import SearchBar from "./components/SearchBar/SearchBar";
+import AppRouter from "./appRouter";
+import SearchBar from "./components/searchBar";
 import { ApplicationProvider } from "./context/ApplicationContext";
 
 function App() {
