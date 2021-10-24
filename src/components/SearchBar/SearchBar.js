@@ -8,7 +8,11 @@ function SearchBar() {
   const history = useHistory();
   const { characterName } = useParams();
   const [searchValue, setSearchValue] = React.useState(characterName || "");
-  const resetSearchValue = () => setSearchValue("");
+
+  const resetSearchValue = () => {
+    setSearchValue("");
+    history.push("/");
+  };
 
   const handleOnChange = (e) => {
     setSearchValue(e.target.value);
