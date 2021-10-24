@@ -1,18 +1,21 @@
-import React, { useContext } from "react";
+import React, { useEffect } from "react";
+import { useHistory, useParams } from "react-router";
 
 import { SearchBarStyle } from "./searchBarStyles";
 import { Button } from "../ui/button";
-import ApplicationContext from "../../context/ApplicationContext";
 
 function SearchBar() {
-  const {
-    searchValue,
-    actions: { updateSearchValue },
-  } = useContext(ApplicationContext);
+  const history = useHistory();
+  const params = useParams();
+  const [searchValue, setSearchValue] = React.useState(
+    params?.characterName || ""
+  );
+  const resetSearchValue = () => setSearchValue("");
 
-  const resetSearchValue = () => updateSearchValue("");
-
-  const handleOnChange = (e) => updateSearchValue(e.target.value);
+  const handleOnChange = (e) => {
+    setSearchValue(e.target.value);
+    history.push(e.target.value);
+  };
 
   return (
     <SearchBarStyle>

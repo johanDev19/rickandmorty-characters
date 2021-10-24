@@ -1,20 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import CardList from "../../components/cardList";
 import { CharactersContainer } from "./characterListStyles";
-
-import { getCharacterByName } from "../../services/rickandmortyService";
-import ApplicationContext from "../../context/ApplicationContext";
+import useCharacters from "../../hook/useCharacters";
 
 function CharacterList() {
-  const [characters, setCharacters] = useState();
-  const { searchValue } = React.useContext(ApplicationContext);
-
-  useEffect(() => {
-    getCharacterByName(searchValue).then((data) => {
-      setCharacters(data.results);
-    });
-  }, [searchValue]);
+  const { characters } = useCharacters();
 
   return (
     <CharactersContainer>
