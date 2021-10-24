@@ -1,11 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-import Label from "./../Label";
+import Label from "../Label";
 import { Avatar } from "../Avatar";
-import { CardStyle, CardContent } from "./styles";
+import { CardStyle, CardContent } from "./CardListStyles";
 
-export function Cards({ characters = [] }) {
-  return characters.map(character => (
+function CardList({ data }) {
+  return data.map((character) => (
     <CardStyle key={character.id}>
       <Avatar image={character.image} />
       <CardContent>
@@ -16,3 +17,13 @@ export function Cards({ characters = [] }) {
     </CardStyle>
   ));
 }
+
+CardList.prototype = {
+  data: PropTypes.array.isRequired,
+};
+
+CardList.defaultProps = {
+  data: [],
+};
+
+export default CardList;
